@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>JS2</title>
+    
+</head>
+<body>
+    <form>
+        <input type="text" id="simpletext" value=""><br>
+        Add new field<input type="checkbox" id="check2" > </br>
+        <div id="dopelement" style="display:none;">
+           Add new information <input type="text" id="newinf" value="">
+           </div>
+        <button type="submit" id="completeall" onclick="completeform()">Submit</button>
+    </form>
+      
+    <script>
+        let box = document.getElementById("check2");
+        function showorhide(){
+            if(check2.checked) {
+                dopelement.style.display="block";
+                }
+            else{
+                dopelement.style.display="none";
+            }
+        }
+        box.addEventListener("click", showorhide);
+        // let comp = document.getElementById('completeall');
+        // function completeform(){
+        //     var form3 = document.getElementsByTagName('input')[0];
+        //     var val= form3.value;
+        //     alert(val);
+        // }
+        // comp.addEventListener('click2', completeform)
+        function completeform(){
+            for(i=0; i<=2; i++)
+            {
+            var inf = document.getElementsByTagName("input")[i].value;
+            alert(inf);}
+            }
+            
+    </script>
+</body>
+</html>
